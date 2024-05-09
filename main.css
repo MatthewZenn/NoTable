@@ -19,11 +19,6 @@ html, body {
   src:url("Assets/Segoe Fluent Icons.ttf");
 }
 
-@font-face {
-font-family: Consolas;
-src:url("Assets/consola.ttf");
-}
-
 header {
 -webkit-app-region: drag;
 height: 50px;
@@ -68,7 +63,7 @@ height: 100%;
 width: 100%;
 background-color: white;
 color: rgb(65, 65, 65);
-font-size: 14pt;
+font-size: 12pt;
 outline: none;
 border: none;
 resize: none;
@@ -104,13 +99,16 @@ color: #505050;
   bottom: 0px;
   right: 0px;
   height: 94%;
-  width: 50%;
+  width: 55%;
   display: block;
-  font-family: Consolas, "Courier New", Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   background-color: white;
   z-index: -1;
   border: none;
   outline: none;
   border-left: 1px solid rgb(170, 170, 170);
   overflow-y: scroll;
+  resize: none;
+  overflow-x: scroll;
+  font-size: 10pt;
 }
