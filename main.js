@@ -1,6 +1,8 @@
 const textarea = document.getElementById('editor');
 const numbers = document.getElementById("numbers");
 const output = document.getElementById('output');
+const one = document.getElementById('field1');
+const two = document.getElementById('field2');
 
 document.getElementById('copy').addEventListener('click', function() {
   navigator.clipboard.writeText(document.getElementById("output").value);
@@ -9,14 +11,13 @@ document.getElementById('copy').addEventListener('click', function() {
 document.getElementById('convert').addEventListener('click', function() {
   output.value = '';
   var text = textarea.value;   
-  var colum2 = text.split(/\r?\n/);
-  var colum1 = colum2.splice(0, Math.ceil(colum2.length/2));
-  console.log(colum1);
-  console.log(colum2);
-  output.value = "| Lanuage | Status | Language | Status |\n|----|----|----|----|";
-  for (let i=0; i<colum1.length; i++) {
-    var item1 = colum1[i].split(',');
-    var item2 = colum2[i].split(',');
+  var column = text.split(/\r?\n/);
+  console.log(column);
+  output.value = "| "+one.value+" | "+two.value+" | "+one.value+" | "+two.value+" |\n|----|----|----|----|";
+  for (let i=0; i<column.length; i+=2) {
+    var item1 = column[i].split(',');
+    var item2 = column[i+1].split(',');
+    console.log(item2);
     output.value += "\n| "+item1[0]+" | "+item1[1]+" | "+item2[0]+" | "+item2[1]+" |";
   }
 });

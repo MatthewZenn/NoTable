@@ -55,6 +55,19 @@ button:hover {
   background-color: rgb(54, 54, 54);
 }
 
+input {
+  position: relative;
+  height: 30px;
+  top: 10px;
+  width: 150px;
+  border: 1px solid rgb(70, 70, 70);
+  background-color: rgb(46, 46, 46);
+  border-radius: 5px;
+  color: rgb(196, 196, 196);
+  padding-left: 10px;
+  outline: none;
+}
+
 ::-webkit-scrollbar {
 width: 20px;
 display: none;
