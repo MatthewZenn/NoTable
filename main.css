@@ -35,7 +35,8 @@ margin-top: 5px;
 cursor: pointer;
 z-index: 999;
 margin-right: 10px;
-color: white;
+color: yellowgreen;
+font-weight: lighter;
 }
 
 button {
@@ -51,7 +52,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(54, 54, 54);
 }
 
 ::-webkit-scrollbar {
@@ -129,5 +130,5 @@ color: #6d6d6d;
   resize: none;
   overflow-x: scroll;
   font-size: 10pt;
-  color: rgb(0, 218, 233);
+  color: greenyellow;
 }
