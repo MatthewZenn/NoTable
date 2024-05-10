@@ -8,6 +8,11 @@ document.getElementById('copy').addEventListener('click', function() {
   navigator.clipboard.writeText(document.getElementById("output").value);
 });
 
+document.getElementById('clear').addEventListener('click', function() {
+  textarea.value = '';
+  output.value = '';
+});
+
 document.getElementById('convert').addEventListener('click', function() {
   output.value = '';
   var text = textarea.value;   
