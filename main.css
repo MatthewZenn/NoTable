@@ -26,17 +26,14 @@ background-color: rgb(40, 40, 40);
 border-bottom: 1px solid rgb(70, 70, 70);
 }
 
-h2 {
+#logo {
 position: relative;
-height: 30px;
+height: 40px;
 float: left;
 margin-left: 10px;
 margin-top: 5px;
-cursor: pointer;
 z-index: 999;
 margin-right: 10px;
-color: yellowgreen;
-font-weight: lighter;
 }
 
 button {
