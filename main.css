@@ -22,7 +22,7 @@ html, body {
 header {
 -webkit-app-region: drag;
 height: 50px;
-background-color: rgb(46, 46, 46);
+background-color: rgb(40, 40, 40);
 border-bottom: 1px solid rgb(70, 70, 70);
 }
 
@@ -45,9 +45,10 @@ button {
   top: 10px;
   width: 30px;
   border: none;
-  background-color: rgb(46, 46, 46);
+  background-color: transparent;
   color: rgb(196, 196, 196);
   cursor: pointer;
+  border-radius: 5px;
   font-family: SegoeIcons;
   font-size: 14pt;
 }
@@ -66,7 +67,7 @@ input {
   top: 5px;
   width: 150px;
   border: 1px solid rgb(70, 70, 70);
-  background-color: rgb(46, 46, 46);
+  background-color: rgb(48, 48, 48);
   border-radius: 5px;
   color: rgb(196, 196, 196);
   padding-left: 10px;
@@ -86,7 +87,7 @@ height: 95%;
 width: 50%;
 display: block;
 font-family: Consolas, "Courier New", Courier, monospace;
-background-color: rgb(46, 46, 46);
+background-color: rgb(48, 48, 48);
 z-index: -1;
 border-right: 1px solid rgb(70, 70, 70);
 overflow-y: hidden;
@@ -98,7 +99,7 @@ top: 0px;
 left: 65px;
 height: 100%;
 width: 100%;
-background-color: rgb(46, 46, 46);
+background-color: rgb(48, 48, 48);
 color: rgb(196, 196, 196);
 font-size: 12pt;
 outline: none;
@@ -139,7 +140,7 @@ color: #6d6d6d;
   width: 50%;
   display: block;
   font-family: "Courier New", Courier, monospace;
-  background-color: rgb(46, 46, 46);
+  background-color: rgb(48, 48, 48);
   z-index: -1;
   border: none;
   outline: none;
