@@ -18,12 +18,13 @@ document.getElementById('convert').addEventListener('click', function() {
   var text = textarea.value;   
   var column = text.split(/\r?\n/);
   console.log(column);
-  output.value = "| "+one.value+" | "+two.value+" | "+one.value+" | "+two.value+" |\n|----|----|----|----|";
-  for (let i=0; i<column.length; i+=2) {
+  output.value = "| "+one.value+" | "+two.value+" | "+one.value+" | "+two.value+" | "+one.value+" | "+two.value+" |\n|----|----|----|----|----|----|";
+  for (let i=0; i<column.length; i+=3) {
     var item1 = column[i].split(',');
     var item2 = column[i+1].split(',');
+    var item3 = column[i+2].split(',');
     console.log(item2);
-    output.value += "\n| "+item1[0]+" | "+item1[1]+" | "+item2[0]+" | "+item2[1]+" |";
+    output.value += "\n| "+item1[0]+" | "+item1[1]+" | "+item2[0]+" | "+item2[1]+" | "+item3[0]+" | "+item3[1]+" |";
   }
 });
 
