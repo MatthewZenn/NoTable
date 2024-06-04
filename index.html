@@ -16,16 +16,18 @@
     <header>
       <img src="Assets/logo.png" id="logo">
       <button id="convert">&#xE895;</button>
+      <button id="parser">&#xE943;</button>
+      <button id="analyze">&#xE9D2;</button>
       <button id="copy">&#xE8C8;</button>
       <button id="clear">&#xE74D;</button>
-      <input type="text" placeholder="Field One" id="field1">
-      <input type="text" placeholder="Field Two" id="field2">
+      <input type="text" placeholder="Labels (seperated by ,)" id="field1">
+      <input type="text" placeholder="#" id="field2">
     </header>
     <div id="textcontainer">
       <div id="numbers">
         <span></span>
       </div>
-      <textarea id="editor" spellcheck="false" placeholder="//Copy CSV Contents"></textarea>
+      <textarea id="editor" spellcheck="false" placeholder="//Input Data"></textarea>
     </div>
     <textarea id="output" readonly></textarea>
     <script src="main.js" async defer></script>

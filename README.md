@@ -1,3 +1,8 @@
 ![logo](Assets/logo.png)
 # Trident
-A Markdown table creator. Converts a CSV format into a three-column Markdown table.
+A conversion tool for various data formats.
+
+# Features
+- Converts a CSV format into a multi-column Markdown table
+- Parses arrays into JSON (coming soon)
+- Analyzes frequency of characters in text

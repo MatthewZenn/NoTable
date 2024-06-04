@@ -2,7 +2,11 @@ const textarea = document.getElementById('editor');
 const numbers = document.getElementById("numbers");
 const output = document.getElementById('output');
 const one = document.getElementById('field1');
-const two = document.getElementById('field2');
+const numb = document.getElementById('field2');
+
+var i = 0;
+var keys = [];
+var date = [];
 
 document.getElementById('copy').addEventListener('click', function() {
   navigator.clipboard.writeText(document.getElementById("output").value);
@@ -16,17 +20,41 @@ document.getElementById('clear').addEventListener('click', function() {
 document.getElementById('convert').addEventListener('click', function() {
   output.value = '';
   var text = textarea.value;   
+  var labels = one.value;
   var column = text.split(/\r?\n/);
-  console.log(column);
-  output.value = "| "+one.value+" | "+two.value+" | "+one.value+" | "+two.value+" | "+one.value+" | "+two.value+" |\n|----|----|----|----|----|----|";
-  for (let i=0; i<column.length; i+=3) {
-    var item1 = column[i].split(',');
-    var item2 = column[i+1].split(',');
-    var item3 = column[i+2].split(',');
-    console.log(item2);
-    output.value += "\n| "+item1[0]+" | "+item1[1]+" | "+item2[0]+" | "+item2[1]+" | "+item3[0]+" | "+item3[1]+" |";
+  var title = labels.split(',');
+  output.value = "| " + ((title[0]+" | "+title[1]+" | " ).repeat(numb.value))+ "\n|" + ("----|".repeat(numb.value*2)) + "\n";
+  for (i=0; i<column.length; i+=Number(numb.value)) {
+    for (let j=i; j<i+Number(numb.value); j++) {
+      console.log(column[j])
+      var item = column[j].split(',');
+      output.value += item[0]+" | "+item[1]+" | "
+    }
+    output.value += "\n| ";
+    console.log(i);
   }
 });
+
+document.getElementById('analyze').addEventListener('click', function() {
+  output.value = '';
+  var input = textarea.value;
+  var result = [...input].reduce((acc, chr) => { 
+    acc[chr] = (acc[chr] || 0) + 1;
+    return acc;
+  }, {});
+  
+  console.log('Result:', result)
+  for(var key in result) {
+    if (result.hasOwnProperty(key)){
+      keys.push(key);
+      date.push(result[key])
+    }
+  }
+  for (l=0;l<keys.length;l++) {
+    output.value += keys[l] +" "+date[l]+"\n";
+  }
+});
+
 
 textarea.addEventListener("keyup", (e) => {
   const num = e.target.value.split("\n").length;

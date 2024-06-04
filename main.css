@@ -20,20 +20,20 @@ html, body {
 }
 
 header {
--webkit-app-region: drag;
-height: 50px;
-background-color: rgb(40, 40, 40);
-border-bottom: 1px solid rgb(70, 70, 70);
+  -webkit-app-region: drag;
+  height: 50px;
+  background-color: rgb(40, 40, 40);
+  border-bottom: 1px solid rgb(70, 70, 70);
 }
 
 #logo {
-position: relative;
-height: 40px;
-float: left;
-margin-left: 10px;
-margin-top: 5px;
-z-index: 999;
-margin-right: 10px;
+  position: relative;
+  height: 40px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+  z-index: 999;
+  margin-right: 10px;
 }
 
 button {
@@ -71,62 +71,68 @@ input {
   outline: none;
 }
 
+#field2 {
+  width: 30px;
+  padding-left: 0px;
+  text-align: center;
+}
+
 ::-webkit-scrollbar {
-width: 20px;
-display: none;
+  width: 20px;
+  display: none;
 }
 
 #textcontainer {
-position: absolute;
-bottom: 0px;
-left: 0px;
-height: 95%;
-width: 50%;
-display: block;
-font-family: Consolas, "Courier New", Courier, monospace;
-background-color: rgb(48, 48, 48);
-z-index: -1;
-border-right: 1px solid rgb(70, 70, 70);
-overflow-y: hidden;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 95%;
+  width: 50%;
+  display: block;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  background-color: rgb(48, 48, 48);
+  z-index: -1;
+  border-right: 1px solid rgb(70, 70, 70);
+  overflow-y: hidden;
 }
 
 #editor {
-position: absolute;
-top: 0px;
-left: 65px;
-height: 100%;
-width: 100%;
-background-color: rgb(48, 48, 48);
-color: rgb(196, 196, 196);
-font-size: 12pt;
-outline: none;
-border: none;
-resize: none;
-padding-left: 5px;
-padding-top: 10px;
-display: block;
-font-family: Consolas, 'Courier New', Courier, monospace;
+  position: absolute;
+  top: 0px;
+  left: 65px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(48, 48, 48);
+  color: rgb(196, 196, 196);
+  font-size: 12pt;
+  outline: none;
+  border: none;
+  resize: none;
+  padding-left: 5px;
+  padding-top: 10px;
+  display: block;
+  font-family: Consolas, 'Courier New', Courier, monospace;
 }
 
 #numbers {
-position: absolute;
-width: 20px;
-left: 10px;
-top: 0;
-font-size: 12pt;
-padding-top: 10px;
-text-align: right;
-font-family: Consolas, 'Courier New', Courier, monospace;
+  position: absolute;
+  width: 20px;
+  left: 10px;
+  top: 0;
+  font-size: 12pt;
+  padding-top: 10px;
+  text-align: right;
+  font-family: Consolas, 'Courier New', Courier, monospace;
 }
 
 #numbers span {
-counter-increment: linenumber;
+  counter-increment: linenumber;
 }
 
 #numbers span::before {
-content: counter(linenumber);
-display: block;
-color: #6d6d6d;
+  content: counter(linenumber);
+  display: block;
+  color: #6d6d6d;
 }
 
 #output {
@@ -136,7 +142,7 @@ color: #6d6d6d;
   height: 94%;
   width: 50%;
   display: block;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Consolas "Courier New", Courier, monospace;
   background-color: rgb(48, 48, 48);
   z-index: -1;
   border: none;
@@ -145,6 +151,6 @@ color: #6d6d6d;
   overflow-y: scroll;
   resize: none;
   overflow-x: scroll;
-  font-size: 10pt;
+  font-size: 12pt;
   color: greenyellow;
 }
