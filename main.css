@@ -1,5 +1,12 @@
+:root {
+  --background: rgb(28, 28, 28);
+  --secondary: rgb(20, 20, 20);
+  --accent: #a8a8a8;
+  --line-color: rgb(56, 56, 56);
+}
+
 html, body {
-  background-color: rgb(46, 46, 46);
+  background-color: var(--secondary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: url(Assets/backImage.png);
   background-repeat: no-repeat;
@@ -22,8 +29,8 @@ html, body {
 header {
   -webkit-app-region: drag;
   height: 50px;
-  background-color: rgb(40, 40, 40);
-  border-bottom: 1px solid rgb(70, 70, 70);
+  background-color: var(--background);
+  border-bottom: 1px solid var(--line-color);
 }
 
 #logo {
@@ -43,7 +50,7 @@ button {
   width: 30px;
   border: none;
   background-color: transparent;
-  color: rgb(196, 196, 196);
+  color: var(--accent);
   cursor: pointer;
   border-radius: 5px;
   font-family: SegoeIcons;
@@ -55,7 +62,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(54, 54, 54);
+  background-color: var(--line-color);
 }
 
 input {
@@ -63,8 +70,8 @@ input {
   height: 30px;
   top: 5px;
   width: 150px;
-  border: 1px solid rgb(70, 70, 70);
-  background-color: rgb(48, 48, 48);
+  border: 1px solid var(--line-color);
+  background-color: var(--secondary);
   border-radius: 5px;
   color: rgb(196, 196, 196);
   padding-left: 10px;
@@ -90,9 +97,9 @@ input {
   width: 50%;
   display: block;
   font-family: Consolas, "Courier New", Courier, monospace;
-  background-color: rgb(48, 48, 48);
+  background-color: var(--secondary);
   z-index: -1;
-  border-right: 1px solid rgb(70, 70, 70);
+  border-right: 1px solid var(--line-color);
   overflow-y: hidden;
 }
 
@@ -102,7 +109,7 @@ input {
   left: 65px;
   height: 100%;
   width: 100%;
-  background-color: rgb(48, 48, 48);
+  background-color: var(--secondary);
   color: rgb(196, 196, 196);
   font-size: 12pt;
   outline: none;
@@ -139,18 +146,40 @@ input {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  height: 94%;
+  height: 94.5%;
   width: 50%;
   display: block;
   font-family: Consolas "Courier New", Courier, monospace;
-  background-color: rgb(48, 48, 48);
+  background-color: var(--secondary);
   z-index: -1;
   border: none;
   outline: none;
-  border-left: 1px solid rgb(70, 70, 70);
+  border-left: 1px solid var(--line-color);
   overflow-y: scroll;
   resize: none;
   overflow-x: scroll;
   font-size: 12pt;
-  color: greenyellow;
+  padding-left: 10px;
+  color: var(--accent);
+}
+
+#canvas {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 30%;
+  width: 50%;
+  background-color: var(--secondary);
+  border-top: 1px solid var(--line-color);
+  z-index: 5;
+}
+
+#graph {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
