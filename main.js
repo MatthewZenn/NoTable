@@ -7,7 +7,9 @@ const ctx = document.getElementById('graph');
 
 var i = 0;
 var keys = [];
+var date2 = [];
 var date = [];
+var sum = 0;
 
 var graph = new Chart();
 
@@ -42,22 +44,40 @@ document.getElementById('analyze').addEventListener('click', function() {
   output.value = '';
   date = [];
   keys = [];
+  date2 = [];
   i = 0;
   graph.destroy();
+  sum = 0
 
   var input = textarea.value;
   input = String(input).toLowerCase();
-  var result = [...input].reduce((acc, chr) => { 
+  var unordered = [...input].reduce((acc, chr) => { 
     acc[chr] = (acc[chr] || 0) + 1;
     return acc;
   }, {});
 
+  ['.', ' ' ,',', '"', '!', '\n', ' '].forEach(e => delete unordered[e]);
+
+  var result = Object.keys(unordered).sort().reduce(
+    (obj, key) => { 
+      obj[key] = unordered[key]; 
+      return obj;
+    }, 
+    {}
+  );
+
   for(var key in result) {
     if (result.hasOwnProperty(key)){
       keys.push(key);
-      date.push(Number(result[key])/10);
+      date2.push(Number(result[key]));
     }
   }
+
+  sum = date2.reduce((a, b) => a + b, 0);
+  for (let p=0; p<date2.length; p++) {
+    date.push((date2[p]/sum)*100);
+  }
+
   for (l=0;l<keys.length;l++) {
     output.value += keys[l]+','+date[l]+'\n';
   }
